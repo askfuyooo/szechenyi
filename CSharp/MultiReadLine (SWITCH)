@@ -1,0 +1,53 @@
+using System;
+
+namespace MultiReadLine
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.Write("> ");
+                string[] Lines = Console.ReadLine().Split(' ');
+                switch (Lines[0])
+                {
+                    case "run":
+                        {
+                            if (Lines.Length == 2)
+                            {
+                                switch (Lines[1])
+                                {
+                                    case "cmd":
+                                        {
+                                            Console.WriteLine("Command Promt");
+                                            break;
+                                        }
+                                    case "vsc":
+                                        {
+                                            Console.WriteLine("Visual Studio Code");
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Run what? :)");
+                                            break;
+                                        }
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Rövid parancs");
+                            }
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Ismeretlen parancs");
+                            break;
+                        }
+                }
+            }
+        }
+    }
+}
