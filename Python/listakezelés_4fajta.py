@@ -103,8 +103,8 @@ from random import randint
 teljeslista = []
 i = 0
 
-while (i < 10):
-    teljeslista.append(randint(1, 10))
+while (i < 100):
+    teljeslista.append(randint(1, 50))
     i+=1
 
 print("[4.F] Teljes lista: ", end="")
