@@ -5,7 +5,7 @@ Feltöltést követően cseréld fel az egyes elemeket úgy, hogy az elsőt az u
 a másodikat az utolsó előttivel, a harmadikat az (n-3). elemmel, és így tovább.
 A középső elemet pedig a sikeres cserék után írd át a "GYŐZELEM" szóra. Írasd ki az új listát a képernyőre.
 """
-
+print("===1. Feladat===")
 automarkak = []
 i = 0
 n = 11
@@ -18,9 +18,6 @@ while (i < n):
             automarkak.append(marka)
             lefut = True
     i+=1
-
-print("[1.F] A megadott autómárkák: ", end="")
-print(*automarkak, sep=", ")
 
 uj_automarkak = []
 for i in reversed(automarkak[6:]):
@@ -37,6 +34,7 @@ print(*automarkak, sep=", ")
 print("[1.F] Autómárkák rendezve: ", end="")
 print(*uj_automarkak, sep=", ")
 
+print("================\n")
 """
 2. feladat:
 Hozz létre egy új listát összefűzéssel (concatenating) az alábbi módon:
@@ -48,7 +46,7 @@ Tehát n = 10.
 Az eredmény lista nézzen ki így:
 uj_lista = ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', ... és így tovább p10-ig és q10-ig]
 """
-
+print("===2. Feladat===")
 bemenet = ['p', 'q']
 uj_lista = []
 n = 10
@@ -62,6 +60,7 @@ while (i < n):
 print("[2.F] Összefűzött lista: ", end="")
 print(*uj_lista, sep=", ")
 
+print("================\n")
 """
 3. feladat:
 Adott egy lista:
@@ -76,7 +75,7 @@ pl:
 hatvany_lista = [ [1], [2, 4], [3, 9, 27], ...]
 A számokat természetesen a hatványozás képletével kell kiszámolni, nem manuálisan beírni.
 """
-
+print("===3. Feladat===")
 lista = [1, 2, 3, 4, 5]
 hatvany_lista = []
 hozzaad_lista = []
@@ -92,6 +91,34 @@ for i in range(len(lista)):
 print("[3.F] Hatvány lista: ", end="")
 print(*hatvany_lista, sep=", ")
 
+print("================\n")
+"""
+4. feladat:
+Tölts fel egy 100 elemű listát random egész számokkal [1-50] intervallumban.
+Számold össze, hány duplikátum fordul elő a teljes listában és írd ki a képernyőre.
+Töröld ki ezeket a duplikátumokat a listából, majd írd ki az új listát.
+"""
+print("===4. Feladat===")
+from random import randint
+teljeslista = []
+i = 0
+
+while (i < 10):
+    teljeslista.append(randint(1, 10))
+    i+=1
+
+print("[4.F] Teljes lista: ", end="")
+print(*teljeslista, sep=", ")
+
+sortedlista = []
+for j in teljeslista:
+    if j not in sortedlista:
+        sortedlista.append(j)
+
+print("[4.F] Duplikátum nélküli lista: ", end="")
+print(*sortedlista, sep=", ")
+
+print("================\n")
 """
 5. feladat:
 Adott egy lista:
@@ -100,10 +127,10 @@ lista = [3, 4, 0, 0, 0, 6, 2, 0, 6, 7, 6, 0, 0, 0, 9, 10, 7, 4, 4, 5, 3, 0, 0, 2
 Az eredmény így kell, hogy kinézzen:
 lista = [3, 4, 6, 2, 6, 7, 6, 9, 10, 7, 4, 4, 5, 3, 2, 9, 7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 """
-
+print("===5. Feladat===")
 lista = [3, 4, 0, 0, 0, 6, 2, 0, 6, 7, 6, 0, 0, 0, 9, 10, 7, 4, 4, 5, 3, 0, 0, 2, 9, 7, 1]
 
-print("[4.F] Alap lista: ", end="")
+print("[5.F] Alap lista: ", end="")
 print(*lista, sep=", ")
 
 db = 0
@@ -120,10 +147,10 @@ while (i < db):
     lista.append(0)
     i+=1
 
-print("[4.F] Szortírozott lista: ", end="")
+print("[5.F] Szortírozott lista: ", end="")
 print(*lista, sep=", ")
-
+print("================")
 
 
 #BEZÁRÁS DODGE
-input("BEZÁRÁSHOZ NYOMJON [ENTER] BILLENTYŰT!")
+input("\n\nBEZÁRÁSHOZ NYOMJON [ENTER] BILLENTYŰT!")
