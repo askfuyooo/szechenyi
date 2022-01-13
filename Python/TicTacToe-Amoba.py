@@ -192,12 +192,6 @@ while (matchIsGoing == True):
         winnerPlayer = "döntetlen"
         matchIsGoing = False
 
-"""
-    else:
-        winnerPlayer = "döntetlen"
-        matchIsGoing = False
-"""
-
 
 if (winnerPlayer == "döntetlen"):
     print("Játék vége! A játék döntetlen lett!")
