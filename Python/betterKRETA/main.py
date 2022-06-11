@@ -33,7 +33,6 @@ class beallitasok:
 
     def kilepes():
         input("Kilépéshez nyomjon [ENTER] billentyűt!")
-        time.sleep(0.25)
         exit()
 
     class ellenorzes:
@@ -201,6 +200,13 @@ class beallitasok:
                             while (i < len(tanuloIDLista)):
                                 print(f"[{tanuloIDLista[i]}] - {tanuloNevLista[i]}")
                                 i += 1
+
+                            if (len(tanuloIDLista) == 0):
+                                print("Úgy látszik, még nincsen tanuló az osztályban.")
+                                print("Átirányítás 3mp múlva...")
+                                time.sleep(3)
+                                elfogadva = True
+                                beallitasok.mutat.menu()
 
                             megerositve = False
                             while (megerositve == False):
