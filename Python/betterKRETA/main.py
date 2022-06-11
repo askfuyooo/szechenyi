@@ -195,7 +195,7 @@ class beallitasok:
                             for sor in tanulok:
                                 tanuloIDLista.append(sor.split(";")[0])
                                 tanuloNevLista.append(f"{sor.split(';')[1]} {sor.split(';')[2]}")
-
+                            print(f"Tanulók száma: {len(tanuloIDLista)}")
                             i = 0
                             while (i < len(tanuloIDLista)):
                                 print(f"[{tanuloIDLista[i]}] - {tanuloNevLista[i]}")
@@ -210,9 +210,13 @@ class beallitasok:
 
                             megerositve = False
                             while (megerositve == False):
-                                tanuloValasz = input("Adja meg a lekérdezni kívánt tanuló ID-jét: $")
+                                tanuloValasz = input("Adja meg a lekérdezni kívánt tanuló ID-jét! Kilépéshez írja be: \"EXITC\" $")
                                 if tanuloValasz in tanuloIDLista:
                                     megerositve = True
+                                elif tanuloValasz == "EXITC":
+                                    megerositve = True
+                                    elfogadva = True
+                                    beallitasok.mutat.menu()
                                 else:
                                     print("Tanuló ID nem található!")
 
