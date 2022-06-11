@@ -3,7 +3,21 @@ class projectBeallitasok:
         self.nev = nev
         self.verzio = verzio
 
-pB = projectBeallitasok("betterKRÉTA", "0.1")
+class tanuloAdatai:
+    def __init__(self, id, vezeteknev, keresztnev, szuldatum, nem, lakhely, email, tel, apjan, anyjan, osztaly) -> None:
+        self.id = id
+        self.vezeteknev = vezeteknev
+        self.keresztnev = keresztnev
+        self.szuldatum = szuldatum
+        self.nem = nem
+        self.lakhely = lakhely
+        self.email = email
+        self.tel = tel
+        self.apjan = apjan
+        self.anyjan = anyjan
+        self.osztaly = osztaly
+
+pB = projectBeallitasok("betterKRÉTA", "0.2")
 
 import os
 import time
@@ -68,6 +82,7 @@ class beallitasok:
                 
                 print("[0] vissza a menübe")
                 print("[1] tanuló hozzáadása")
+                print("[2] tanuló lekérdezése")
 
 
 
@@ -111,6 +126,7 @@ class beallitasok:
                             #8 - anyja neve
                             while (hozzadasVege == False):
                                 tanuloAdatok = []
+                                print(f"A tanuló ID-je: {tanuloID}")
                                 tanuloAdatok.append(input("Adja meg a tanuló vezetéknevét: $"))
                                 tanuloAdatok.append(input("Adja meg a tanuló keresztnevét: $"))
                                 tanuloAdatok.append(input("Adja meg a tanuló születési dátumát a következő formában: \"YYYY/MM/DD\" $"))
@@ -124,7 +140,7 @@ class beallitasok:
                                 os.system("cls")
                                 print(f"== {allitandoOsztaly.nev} | adatok ellenőrzése ==")
 
-
+                                print(f"Tanuló ID-je: {tanuloID}")
                                 print(f"Tanuló vezetékneve: {tanuloAdatok[0]}")
                                 print(f"Tanuló keresztneve: {tanuloAdatok[1]}")
                                 print(f"Tanuló születési dátuma: {tanuloAdatok[2]}")
@@ -137,7 +153,7 @@ class beallitasok:
 
                                 megerositve = False
                                 while (megerositve == False):
-                                    valasz = input("Helyesek az adatok? [y/n] $").upper()
+                                    valasz = input("Helyesek az adatok? [y/n] Kilépéshez írja be: \"EXITC\" $").upper()
 
                                     if (valasz == "Y"):
                                         hozzadasVege = True
@@ -145,11 +161,13 @@ class beallitasok:
                                     elif (valasz == "N"):
                                         print("Ebben az esetben újra kell kezdeni a létrehozást!")
                                         megerositve = True
+                                    elif (valasz == "EXITC"):
+                                        beallitasok.mutat.menu()
                                     else:
                                         print("Kérem válszoljon igennel [y] vagy nemmel [n]!")
 
 
-                            ujTanulo = f"{tanuloID};{tanuloAdatok[0]};{tanuloAdatok[1]};{tanuloAdatok[2]};{tanuloAdatok[3]};{tanuloAdatok[4]};{tanuloAdatok[5]};{tanuloAdatok[6]};{tanuloAdatok[7]};{tanuloAdatok[8]};"
+                            ujTanulo = f"{tanuloID};{tanuloAdatok[0]};{tanuloAdatok[1]};{tanuloAdatok[2]};{tanuloAdatok[3]};{tanuloAdatok[4]};{tanuloAdatok[5]};{tanuloAdatok[6]};{tanuloAdatok[7]};{tanuloAdatok[8]}"
                             
                             jelenlegiTanulok.append(ujTanulo)
 
@@ -163,10 +181,63 @@ class beallitasok:
                             time.sleep(3)
                             beallitasok.mutat.menu()
 
+                        elif (valasz == 2):
+                            os.system("cls")
+                            print(f"== {allitandoOsztaly.nev} | Tanulók ==")
+
+                            tanulok = []
+                            with open("osztalyok/" + allitandoOsztaly.nev + "/diakok", "r", encoding="utf8()") as f:
+                                for sor in f.readlines():
+                                    splitelve = sor.split("\n")
+                                    tanulok.append(splitelve[0])
+                            
+                            tanuloIDLista = []
+                            tanuloNevLista = []
+                            for sor in tanulok:
+                                tanuloIDLista.append(sor.split(";")[0])
+                                tanuloNevLista.append(f"{sor.split(';')[1]} {sor.split(';')[2]}")
+
+                            i = 0
+                            while (i < len(tanuloIDLista)):
+                                print(f"[{tanuloIDLista[i]}] - {tanuloNevLista[i]}")
+                                i += 1
+
+                            megerositve = False
+                            while (megerositve == False):
+                                tanuloValasz = input("Adja meg a lekérdezni kívánt tanuló ID-jét: $")
+                                if tanuloValasz in tanuloIDLista:
+                                    megerositve = True
+                                else:
+                                    print("Tanuló ID nem található!")
+
+                            os.system("cls")
+                            tanuloID = int(tanuloValasz)
+                            cim = f"== {tanuloNevLista[tanuloID]} | {allitandoOsztaly.nev} =="
+                            print(cim)
+                            tanuloSor = tanulok[tanuloID].split(";")
+
+                            tanulo = tanuloAdatai(tanuloSor[0], tanuloSor[1], tanuloSor[2], tanuloSor[3], tanuloSor[4], tanuloSor[5], tanuloSor[6], tanuloSor[7], tanuloSor[8], tanuloSor[9], allitandoOsztaly.nev)
+                            print(f"ID: {tanulo.id}")
+                            print(f"Osztály: {tanulo.osztaly}")
+                            print(f"Vezetéknév: {tanulo.vezeteknev}")
+                            print(f"Keresztnév: {tanulo.keresztnev}")
+                            print(f"Születési dátum: {tanulo.szuldatum}")
+                            print(f"Nem: {tanulo.nem}")
+                            print(f"Lakhely: {tanulo.lakhely}")
+                            print(f"Email: {tanulo.email}")
+                            print(f"Telefon: {tanulo.tel}")
+                            print(f"Apja neve: {tanulo.apjan}")
+                            print(f"Anyja neve: {tanulo.anyjan}")
+
+                            elfogadva = True
+                            print("=" * len(cim))
+                            input("Vissza a menübe [ENTER] gombbal")
+                            beallitasok.mutat.menu()
+
                         else:
                             print("Nem létező opció!")
                     except:
-                        print("Valódi számot adjon meg!")
+                        print(f"Valódi számot adjon meg!")
 
             else:
                 print("Nem szerkeszthetsz osztályokat, amég nem léteznek!")
