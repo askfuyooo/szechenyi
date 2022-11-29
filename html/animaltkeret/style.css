@@ -1,0 +1,59 @@
+body {
+    background-color: #303030;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/*
+transparent, transparent, transparent, szín
+*/
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(magenta, transparent, transparent, magenta);
+    animation: rotate 2s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(cyan, transparent, transparent, cyan);
+    animation: rotate 2s linear infinite;
+    animation-delay: -1s;
+}
+
+.box span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background-color: #000000;
+    z-index: 2;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
