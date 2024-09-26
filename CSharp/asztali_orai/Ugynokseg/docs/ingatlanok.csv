@@ -1,0 +1,35 @@
+tipus;cím;telekmeret_m2;nm_ar;beepitheto;lakoterulet
+telek;Pákozd;9;10;igen;-
+telek;Budapest I.;1000;10000;igen;-
+kerteshaz;Budapest IV.;800;50000;-;9
+kerteshaz;Székesfehérvár;600;1000;-;100
+telek;Székesfehérvár;750;1500;-;150
+telek;Budapest VIII.;1500;1;nem;-
+kerteshaz;Cegléd;1650;10000;-;120
+kerteshaz;Nagykanizsa;1000;1000;-;130
+kerteshaz;Tatabánya;870;800;-;100
+telek;Vál;2500;800;igen;-
+telek;Soponya;4000;350;igen;-
+telek;Kisfalud;1500;870;igen;-
+kerteshaz;Sárvár;2800;1000;-;300
+kerteshaz;Pécel;100;5000;-;250
+kerteshaz;Hatvan;2000;999;-;190
+telek;Tata;1800;500;igen;-
+telek;Káloz;3000;300;igen;-
+telek;Szabadbattyán;7000;450;nem;-
+kerteshaz;Érd;3000;870;-;270
+kerteshaz;Szombathely;1500;980;-;190
+kerteshaz;Baracska;2300;800;-;300
+telek;Kajászó;3000;570;igen;-
+kerteshaz;Velence;0;1000;-;100
+kerteshaz;Gárdony;1200;1000;-;130
+kerteshaz;Gárdony;800;950;-;80
+kerteshaz;Gárdony;900;870;-;50
+kerteshaz;Velence;5000;1200;-;400
+kerteshaz;Velence;4500;1400;-;340
+telek;Balassagyarmat;1000;230;igen;-
+telek;Ózd;1300;340;igen;-
+telek;Miskolc;10000;700;nem;-
+telek;Székesfehérvár;2030;1000;igen;-
+telek;Székesfehérvár;1500;989;igen;-
+telek;Gárdony;2300;1000;igen;-
