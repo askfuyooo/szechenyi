@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "nev": "epulet"
+    },
+    {
+        "id": 2,
+        "nev": "foldterulet"
+    },
+    {
+        "id": 3,
+        "nev": "egyeb epulet"
+    }
+]

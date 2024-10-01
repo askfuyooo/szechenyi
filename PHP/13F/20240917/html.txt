@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="card w-25 m-auto p-3">
+        <form action="/" method="GET">
+            <input class="form-control mb-2" type="number" name="mennyit" value="<?php echo $value ?>">
+
+            <select name="mirol" class="form-control mb-2">
+                <option value="EUR">Euró</option>
+                <option value="HUF">Forint</option>
+            </select>
+
+            <?php echo $vegeredmeny ?>
+        </form>
+    </div>
+</body>
+
+</html>
