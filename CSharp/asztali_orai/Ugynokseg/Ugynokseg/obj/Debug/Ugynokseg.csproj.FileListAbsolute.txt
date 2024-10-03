@@ -1,0 +1,10 @@
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\bin\Debug\Ugynokseg.exe.config
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\bin\Debug\Ugynokseg.exe
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\bin\Debug\Ugynokseg.pdb
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.csproj.AssemblyReference.cache
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.Properties.Resources.resources
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.csproj.GenerateResource.cache
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.csproj.CoreCompileInputs.cache
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.exe
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.pdb
+C:\Users\toth.adam.1215\source\repos\Ugynokseg\Ugynokseg\obj\Debug\Ugynokseg.Form1.resources
