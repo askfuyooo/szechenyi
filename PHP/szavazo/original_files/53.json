@@ -1,0 +1,10 @@
+{
+    "answers": "Melyik a kedvenc frontend JavaScript keretrendszered",
+    "votes": {
+        "Vue": 19,
+        "React": 11,
+        "Svelte": 8,
+        "jQuery": 5
+      
+    }
+}
